@@ -34,7 +34,7 @@ server.on("listening", onListening);
  */
 
 function normalizePort(val) {
-	const port = parseInt(val, 10);
+	var port = parseInt(val, 10);
 
 	if (isNaN(port)) {
 		// named pipe
@@ -80,6 +80,7 @@ function onError(error) {
  */
 
 function onListening() {
+	console.log(process.env.PORT);
 	const addr = server.address();
 	const bind = typeof addr === "string" ? "pipe " + addr : "port " + addr.port;
 	debug("Listening on " + bind);
