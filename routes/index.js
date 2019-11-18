@@ -21,4 +21,6 @@ router.get("/api/todos", todosController.list);
 router.get("/api/todos/:todoId", todosController.retrieve);
 router.post("/api/todos/:todoId/items", todoItemsController.create);
 
+router.put("/api/todos/:todoId", todosController.update);
+
 module.exports = router;
