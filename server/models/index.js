@@ -40,6 +40,7 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
+/* Testing the connection in the Terminal */
 sequelize
 	.authenticate()
 	.then(() => {
